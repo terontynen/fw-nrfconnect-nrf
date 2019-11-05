@@ -28,6 +28,8 @@ menuconfig LWM2M_CARRIER
 	# AT libraries
 	depends on AT_CMD
 	depends on AT_CMD_PARSER
+	# AT requirements
+	depends on (AT_CMD_RESPONSE_MAX_LEN >= 128)
 	# reboot functionality
 	depends on REBOOT
 	help
